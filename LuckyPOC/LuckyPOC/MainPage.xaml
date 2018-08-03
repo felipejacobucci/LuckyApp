@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LuckyPOC"
+             x:Class="LuckyPOC.MainPage"
+             Title="Bem vindo!">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+    	<Label Text="Welcome to LuckyApp!" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Button x:Name="mapButton" Text="Map!" Clicked="MapButton_Clicked" />
+        <Button x:Name="cadastrarButton" Text="Cadastrar animal" Clicked="CadastrarButton_Clicked" />
+        <Button x:Name="listAnimalsButton" Text="Listar animais" Clicked="listAnimalsButton_Clicked" />
+
+        <ListView x:Name="animalsList" Grid.Row="4">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="30">
+                        <StackLayout Padding="5">
+                            <Label Text="{Binding Description}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+
+</ContentPage>
